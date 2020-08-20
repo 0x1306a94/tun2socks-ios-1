@@ -53,6 +53,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
         manager.loadVPNPreference() { error in
             guard error == nil else {
                 fatalError("load VPN preference failed: \(error.debugDescription)")
@@ -64,7 +65,6 @@ class TableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateUI()
     }
     
     deinit {
