@@ -10,8 +10,11 @@ class TableViewController: UITableViewController {
     
     @IBOutlet weak var toggleSwitch: UISwitch!
     
+    @IBOutlet weak var protoField: UILabel!
     @IBOutlet weak var hostField: UITextField!
     @IBOutlet weak var portField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var cipherLabel: UILabel!
     
     @IBAction func toggle(_ sender: UISwitch) {
         updateConfig()
@@ -37,11 +40,15 @@ class TableViewController: UITableViewController {
     func updateConfig() {
         ProxyConfig.storeStringConfig(name: ProxyConfig.ConfigKey.Host.rawValue, value: hostField.text!)
         ProxyConfig.storeIntConfig(name: ProxyConfig.ConfigKey.Port.rawValue, value: Int(portField.text!)!)
+        ProxyConfig.storeStringConfig(name: ProxyConfig.ConfigKey.Password.rawValue, value: passwordField.text!)
     }
     
     func updateUI() {
+        protoField.text  = ProxyConfig.getStringConfig(name: ProxyConfig.ConfigKey.Proto.rawValue)!
         hostField.text = ProxyConfig.getStringConfig(name: ProxyConfig.ConfigKey.Host.rawValue)
         portField.text = String(ProxyConfig.getIntConfig(name: ProxyConfig.ConfigKey.Port.rawValue)!)
+        passwordField.text = ProxyConfig.getStringConfig(name: ProxyConfig.ConfigKey.Password.rawValue)
+        cipherLabel.text = ProxyConfig.getStringConfig(name: ProxyConfig.ConfigKey.Cipher.rawValue)!
     }
     
     override func viewDidLoad() {

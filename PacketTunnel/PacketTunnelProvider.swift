@@ -6,14 +6,28 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         let tunnelNetworkSettings = createTunnelSettings()
         setTunnelNetworkSettings(tunnelNetworkSettings) { [weak self] error in
             let tunFd = self?.packetFlow.value(forKeyPath: "socket.fileDescriptor") as! Int32
-            switch ProxyConfig.preferHandler {
+            let rawProto = ProxyConfig.getStringConfig(name: ProxyConfig.ConfigKey.Proto.rawValue)!
+            NSLog("raw proto \(rawProto)")
+            let proto = ProxyConfig.Handler.init(rawValue: rawProto)!
+            switch proto {
             case .Socks5:
                 let host = ProxyConfig.getStringConfig(name: ProxyConfig.ConfigKey.Host.rawValue)!
                 let port = ProxyConfig.getIntConfig(name: ProxyConfig.ConfigKey.Port.rawValue)!
                 let proxyServer = "\(host):\(port)"
                 NSLog("proxy server \(proxyServer)")
                 DispatchQueue.global(qos: .default).async {
-                    run(tunFd, proxyServer)
+                    run(tunFd, "socks", proxyServer, "", "")
+                }
+                break
+            case .Shadowsocks:
+                let host = ProxyConfig.getStringConfig(name: ProxyConfig.ConfigKey.Host.rawValue)!
+                let port = ProxyConfig.getIntConfig(name: ProxyConfig.ConfigKey.Port.rawValue)!
+                let pass = ProxyConfig.getStringConfig(name: ProxyConfig.ConfigKey.Password.rawValue)!
+                let cipher = ProxyConfig.getStringConfig(name: ProxyConfig.ConfigKey.Cipher.rawValue)!
+                let proxyServer = "\(host):\(port)"
+                NSLog("proxy server \(proxyServer) pass: \(pass) cipher: \(String(describing: cipher))")
+                DispatchQueue.global(qos: .default).async {
+                    run(tunFd, "shadowsocks", proxyServer, pass, cipher)
                 }
                 break
             }

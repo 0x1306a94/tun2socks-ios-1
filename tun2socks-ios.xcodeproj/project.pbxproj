@@ -17,6 +17,8 @@
 		240B33E82188907600CB0B44 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B33E72188907600CB0B44 /* VPNManager.swift */; };
 		240B33EB218897A400CB0B44 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240B33EA218897A400CB0B44 /* NetworkExtension.framework */; };
 		240B33EC2188980900CB0B44 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240B33EA218897A400CB0B44 /* NetworkExtension.framework */; };
+		24A1ECB324EE574100700904 /* CipherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1ECB224EE574100700904 /* CipherTableViewController.swift */; };
+		24A1ECB524EE5FC700700904 /* ProtocolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1ECB424EE5FC700700904 /* ProtocolTableViewController.swift */; };
 		24B9C1F124DE67AE0057293C /* ProxyConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B9C1EF24DE67AE0057293C /* ProxyConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24B9C1F424DE67AE0057293C /* ProxyConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B9C1ED24DE67AE0057293C /* ProxyConfig.framework */; };
 		24B9C1F524DE67AE0057293C /* ProxyConfig.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24B9C1ED24DE67AE0057293C /* ProxyConfig.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -81,6 +83,8 @@
 		240B33E72188907600CB0B44 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
 		240B33EA218897A400CB0B44 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		240B33ED2188980900CB0B44 /* tun2socks-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "tun2socks-ios.entitlements"; sourceTree = "<group>"; };
+		24A1ECB224EE574100700904 /* CipherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherTableViewController.swift; sourceTree = "<group>"; };
+		24A1ECB424EE5FC700700904 /* ProtocolTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTableViewController.swift; sourceTree = "<group>"; };
 		24B9C1ED24DE67AE0057293C /* ProxyConfig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProxyConfig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B9C1EF24DE67AE0057293C /* ProxyConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProxyConfig.h; sourceTree = "<group>"; };
 		24B9C1F024DE67AE0057293C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				240B33CD21888F7F00CB0B44 /* LaunchScreen.storyboard */,
 				240B33D021888F7F00CB0B44 /* Info.plist */,
 				240B33E72188907600CB0B44 /* VPNManager.swift */,
+				24A1ECB224EE574100700904 /* CipherTableViewController.swift */,
+				24A1ECB424EE5FC700700904 /* ProtocolTableViewController.swift */,
 			);
 			path = "tun2socks-ios";
 			sourceTree = "<group>";
@@ -354,9 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A1ECB324EE574100700904 /* CipherTableViewController.swift in Sources */,
 				240B33C721888F7F00CB0B44 /* TableViewController.swift in Sources */,
 				240B33E82188907600CB0B44 /* VPNManager.swift in Sources */,
 				240B33C521888F7F00CB0B44 /* AppDelegate.swift in Sources */,
+				24A1ECB524EE5FC700700904 /* ProtocolTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
