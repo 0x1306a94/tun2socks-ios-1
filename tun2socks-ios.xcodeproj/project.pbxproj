@@ -17,13 +17,13 @@
 		240B33E82188907600CB0B44 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240B33E72188907600CB0B44 /* VPNManager.swift */; };
 		240B33EB218897A400CB0B44 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240B33EA218897A400CB0B44 /* NetworkExtension.framework */; };
 		240B33EC2188980900CB0B44 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240B33EA218897A400CB0B44 /* NetworkExtension.framework */; };
+		24588BE624EFCCB8001132C5 /* libtun2socks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24588BE524EFCCB8001132C5 /* libtun2socks.a */; };
 		24A1ECB324EE574100700904 /* CipherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1ECB224EE574100700904 /* CipherTableViewController.swift */; };
 		24A1ECB524EE5FC700700904 /* ProtocolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A1ECB424EE5FC700700904 /* ProtocolTableViewController.swift */; };
 		24B9C1F124DE67AE0057293C /* ProxyConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B9C1EF24DE67AE0057293C /* ProxyConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		24B9C1F424DE67AE0057293C /* ProxyConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B9C1ED24DE67AE0057293C /* ProxyConfig.framework */; };
 		24B9C1F524DE67AE0057293C /* ProxyConfig.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24B9C1ED24DE67AE0057293C /* ProxyConfig.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24B9C1FA24DE67BD0057293C /* ProxyConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B9C1F924DE67BD0057293C /* ProxyConfig.swift */; };
-		24B9C20124DEE15B0057293C /* libtun2socks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24B9C20024DEE15B0057293C /* libtun2socks.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +33,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 240B33D921888FE600CB0B44;
 			remoteInfo = PacketTunnel;
+		};
+		2496E6DE24EFC44800736A5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 240B33B921888F7F00CB0B44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24B9C1EC24DE67AE0057293C;
+			remoteInfo = ProxyConfig;
 		};
 		24B9C1F224DE67AE0057293C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -83,15 +90,15 @@
 		240B33E72188907600CB0B44 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
 		240B33EA218897A400CB0B44 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		240B33ED2188980900CB0B44 /* tun2socks-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "tun2socks-ios.entitlements"; sourceTree = "<group>"; };
+		24588BE524EFCCB8001132C5 /* libtun2socks.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtun2socks.a; sourceTree = "<group>"; };
+		24588BE724EFCCCC001132C5 /* tun2socks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tun2socks.h; sourceTree = "<group>"; };
 		24A1ECB224EE574100700904 /* CipherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherTableViewController.swift; sourceTree = "<group>"; };
 		24A1ECB424EE5FC700700904 /* ProtocolTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTableViewController.swift; sourceTree = "<group>"; };
 		24B9C1ED24DE67AE0057293C /* ProxyConfig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProxyConfig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B9C1EF24DE67AE0057293C /* ProxyConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProxyConfig.h; sourceTree = "<group>"; };
 		24B9C1F024DE67AE0057293C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24B9C1F924DE67BD0057293C /* ProxyConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyConfig.swift; sourceTree = "<group>"; };
-		24B9C1FC24DEDED70057293C /* tun2socks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tun2socks.h; sourceTree = "<group>"; };
 		24B9C1FF24DEDF270057293C /* Tun2socks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tun2socks-Bridging-Header.h"; sourceTree = "<group>"; };
-		24B9C20024DEE15B0057293C /* libtun2socks.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtun2socks.a; path = "../../../../rust/tun2socks-rs/target/universal/release/libtun2socks.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24B9C20124DEE15B0057293C /* libtun2socks.a in Frameworks */,
+				24588BE624EFCCB8001132C5 /* libtun2socks.a in Frameworks */,
 				240B33EB218897A400CB0B44 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,8 +201,8 @@
 		24B9C1FB24DEDEB40057293C /* libtun2socks */ = {
 			isa = PBXGroup;
 			children = (
-				24B9C20024DEE15B0057293C /* libtun2socks.a */,
-				24B9C1FC24DEDED70057293C /* tun2socks.h */,
+				24588BE724EFCCCC001132C5 /* tun2socks.h */,
+				24588BE524EFCCB8001132C5 /* libtun2socks.a */,
 			);
 			path = libtun2socks;
 			sourceTree = "<group>";
@@ -246,6 +253,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2496E6DF24EFC44800736A5C /* PBXTargetDependency */,
 			);
 			name = PacketTunnel;
 			productName = PacketTunnel;
@@ -391,6 +399,11 @@
 			isa = PBXTargetDependency;
 			target = 240B33D921888FE600CB0B44 /* PacketTunnel */;
 			targetProxy = 240B33E021888FE600CB0B44 /* PBXContainerItemProxy */;
+		};
+		2496E6DF24EFC44800736A5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24B9C1EC24DE67AE0057293C /* ProxyConfig */;
+			targetProxy = 2496E6DE24EFC44800736A5C /* PBXContainerItemProxy */;
 		};
 		24B9C1F324DE67AE0057293C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
