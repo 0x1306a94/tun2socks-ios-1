@@ -16,7 +16,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
                 let proxyServer = "\(host):\(port)"
                 NSLog("proxy server \(proxyServer)")
                 DispatchQueue.global(qos: .default).async {
-                    run(tunFd, "socks", proxyServer, "", "")
+                    run_tun2socks(tunFd, "socks", proxyServer, "", "")
                 }
                 break
             case .Shadowsocks:
@@ -27,7 +27,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
                 let proxyServer = "\(host):\(port)"
                 NSLog("proxy server \(proxyServer) pass: \(pass) cipher: \(String(describing: cipher))")
                 DispatchQueue.global(qos: .default).async {
-                    run(tunFd, "shadowsocks", proxyServer, pass, cipher)
+                    run_tun2socks(tunFd, "shadowsocks", proxyServer, pass, cipher)
                 }
                 break
             }

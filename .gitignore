@@ -1,6 +1,3 @@
-PacketTunnel/libtun2socks/libtun2socks.a
-PacketTunnel/libtun2socks/tun2socks.h
-
 *.framework
 
 # Xcode
